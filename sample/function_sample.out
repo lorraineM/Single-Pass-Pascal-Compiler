@@ -1,0 +1,20 @@
+# This is a sample file for basic hello world in mips
+  .text
+  .globl main
+main:
+  la $a0, str1
+  jal gao1
+  
+  li $v0, 10
+  syscall
+  
+gao1:
+  li $v0, 4
+#  la $a0, str1
+  syscall
+  jr $ra
+  
+  
+
+  .data
+str1: .asciiz "Hello World!\n"
